@@ -1,0 +1,56 @@
+.drop-zone{
+  height: 60px;
+  border: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.file-wrapper{
+  height: 30px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 10px 0;
+  input{
+    display: none;
+  }
+}
+
+
+.recipient-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .recipient-button{
+    position: relative;
+    .recipient-modal {
+      position: absolute;
+      left: -320px;
+      top: 0;
+      width: 320px;
+      height: 320px;
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 4px;
+      z-index: 1;
+      > div{
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+
+
+.additional-file-wrapper{
+  display: flex;
+  justify-content: space-between;
+  border: 1px dotted grey;
+  margin: 5px 0;
+  padding: 5px;
+}
