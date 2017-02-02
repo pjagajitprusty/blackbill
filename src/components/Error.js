@@ -9,9 +9,9 @@ class Error extends React.Component {
       <div>
         {
           show && errors.length ?
-          <div>
-            {errors}
-            <input type="button" value="Hide" onClick={this.props.hideError}/>
+          <div className='error-wrapper'>
+            <div>{errors}</div>
+            <div><input type="button" value="Hide" onClick={this.props.hideError}/></div>
           </div> :
           null
         }

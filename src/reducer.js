@@ -1,4 +1,4 @@
-import initialState from './initialState'
+import { submitInvoice } from './actions'
 
 const reducer = (prevState, action) => {
   let {payload} = action
@@ -23,7 +23,7 @@ const reducer = (prevState, action) => {
     case 'ADD_ADDITIONAL_FILE':
       return Object.assign({}, prevState, {additionalFiles : [...prevState.additionalFiles, payload]})
     case 'SUBMIT_PROCESS':
-      return initialState
+      return submitInvoice(prevState)
 
     default:
       return prevState

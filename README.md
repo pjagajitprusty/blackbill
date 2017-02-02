@@ -4,19 +4,19 @@ React Invoice upload app.
 
 ## Start App
 
-Run following command.
+Run ```$ npm run build```
 
 ```
-It will start local server at : https://localhost:3000/
+It will start node server at : https://localhost:3000/
 ```
 
-Files are server from ```public``` directory.
+Files are served from ```public``` directory.
 
 
 
 ### TODO:
-
-- [x] Redux state management
-- [x] SASS precompiler
-- [ ] POST API to invoice submit request
-- [ ] Input field validation
+- [x] Project setup and Develop components with React
+- [x] Redux state management.
+- [x] SASS precompiler & styling.
+- [x] Basic Validation for Invoice submit & Recipient form.
+- [ ] POST API to handle invoice submit request.

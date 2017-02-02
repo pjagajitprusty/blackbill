@@ -31,26 +31,27 @@ class Recipient extends React.Component {
     let recipientTitle = Object.keys(recipient).length === 0 && recipient.constructor === Object ? 'Add Recipient' : 'Edit Recipient'
     return (
       <div className="recipient-wrapper">
-        <div>
+        <div className='left-panel'>
           <div>
-            <strong>File Name:</strong> {invoice.name}
+            <label><strong>File Name:</strong></label> {invoice.name}
           </div>
           <div>
-            <label>Invoice Amount</label>
+            <label>Invoice Amount:</label>
             <input type="number" ref="invoiceAmount" value={invoiceAmount} onChange={this.onAmountChange}/>
-            <label>Payment Target</label>
+          </div>
+          <div>
+            <label>Payment Target:</label>
             <DatePicker placeholderText="Choose Date" peekNextMonth showMonthDropdown showYearDropdown dropdownMode="select"
               selected={moment(new Date(paymentTarget))}
               onChange={this.onDateChange} />
           </div>
-
           <div>
-            <strong>Additional Files:</strong>
-            {additionalFiles.map((v, i) => <span key={i}>{v.data.name}</span>)}
+            <label><strong>Additional Files:</strong></label>
+            {additionalFiles.map((v, i) => <span key={i} className='additional-files'>{v.data.name},</span>)}
           </div>
         </div>
 
-        <div>
+        <div className='right-panel'>
           <div>
             <strong>Recipient Info</strong>
           </div>

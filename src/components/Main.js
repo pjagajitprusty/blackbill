@@ -10,7 +10,7 @@ class Main extends React.Component{
   render(){
     let {invoice} = this.props
     return (
-      <div>
+      <div className="wrapper">
         {
           !(invoice instanceof File) ?
             <UploadInvoice multiple={false} /> :

@@ -27,26 +27,31 @@ class RecipientModal extends React.Component {
     this.props.updateRecipient(temp);
     this.props.toggleModal()
   }
+
   render() {
     var {fname, lname, address, phone} = this.state
     return (
         <form className="recipient-modal" onSubmit={this.handleSubmit} >
-          <div>{this.props.title}</div>
-          <div>Name :
+          <div className='title'>{this.props.title}</div>
+          <div>
+            <label>Name:</label>
             <input type="text" value={fname}
               name="fname" onChange={this.handleChange}
               pattern="[A-Za-z]+" title="Name should contain letters only"
               required/>
           </div>
-          <div>Surname :
+          <div>
+            <label>Surname:</label>
             <input type="text" value={lname} name="lname" onChange={this.handleChange}
               pattern="[A-Za-z]+" title="Surname should contain letters only"
               required/>
           </div>
-          <div>Address :
+          <div>
+            <label>Address:</label>
             <input type="text" value={address ? address : ''} name="address" onChange={this.handleChange} required/>
           </div>
-          <div>Phone :
+          <div>
+            <label>Phone:</label>
             <input type="number" value={phone ? phone : ''} name="phone" onChange={this.handleChange} required/>
           </div>
           <div>
